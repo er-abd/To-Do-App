@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 
 import os
-import django_heroku
+# import django_heroku
 
 from pathlib import Path
 
@@ -35,7 +35,9 @@ SECRET_KEY = 'django-insecure-13aslrm9+ku(7^a)9^e&_$*294&w$3+h7qyzkmabf5k=_v9hy8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '*'
+]
 
 
 # Application definition
@@ -48,7 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # that is how we configure our new app.
-    'main.apps.MainConfig'
+    'main.apps.MainConfig',
+    'storages',
+    'qrcode',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +139,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+# new
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 # that tells django where to send unauthenticated users
 LOGIN_URL = 'login'
 
@@ -145,7 +153,7 @@ LOGIN_URL = 'login'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
