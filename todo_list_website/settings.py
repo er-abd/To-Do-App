@@ -19,7 +19,7 @@ from pathlib import Path
 
 CSRF_COOKIE_SECURE = False
 
-CSRF_TRUSTED_ORIGINS = ['https://*.tick-task.alabdullah.me']
+CSRF_TRUSTED_ORIGINS = ['https://*.tick-task.alabdullah.me', 'https://web-production-ffd5.up.railway.app']
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
