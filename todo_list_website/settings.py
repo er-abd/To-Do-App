@@ -100,10 +100,10 @@ WSGI_APPLICATION = 'todo_list_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todoapp',
-        'USER': 'postgres',
-        'PASSWORD': 'super12345super',
-        'HOST': 'database-3.cms5skheoser.eu-north-1.rds.amazonaws.com',
+        'NAME': 'tickticktask',
+        'USER': 'tickticktask',
+        'PASSWORD': 'ticktick123456task',
+        'HOST': 'database-7.cms5skheoser.eu-north-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
